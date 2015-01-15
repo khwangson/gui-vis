@@ -1,0 +1,133 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<script src="ref/jquery/js/jquery-1.10.2.js"></script>
+	<script src="ref/jquery/js/jquery-ui-1.10.4.custom.min.js"></script>
+
+	
+	<!-- Bootstrap styling scripts-->
+	<link rel="stylesheet" href="ref/bootstrap.min.css">
+    <script src="ref/bootstrap.min.js"></script>
+    
+     <!--  <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script> -->
+     <script src="ref/jquery.xml2json.js"></script>
+     <script src="ref/d3.min.js" charset="utf-8"></script> 
+     <link rel="stylesheet" href="view/main.css">
+	 <link rel="stylesheet" href="view/FileMenu.css">
+	 <link rel="stylesheet" href="ref/jquery/css/smoothness/jquery-ui-1.10.4.custom.min.css">
+     <script src="js/main.js"></script>
+	 <script src="js/modification.js"></script>
+	 <script src="js/bitmap.js"></script>
+	 
+	 <style>
+	 .link {
+     	stroke: #999;
+	 }
+	 .node {
+		cursor: move;
+		fill: white;
+		fill-opacity: .1;
+	  } 
+	  
+	 
+	 </style>
+	  
+	  
+</head> 
+<body>
+
+	<div class="container">
+    	<div class="row">
+			<div class="container">
+    	<div class="row">
+			<div class="col-md-12" id="uploads">
+				<h2>GUITAR VISUALIZATION</h2>
+				<div id="leftcolumn">
+					<label for="file">Upload an XML file</label>
+					<input type="file" id="files" name="file" multiple/>
+					<button id="extractGUI" class="btn btn-primary">GUI</button>
+					<button id="extractEFG" class="btn btn-primary">EFG</button>
+					<button id="test" class="btn btn-primary">TEST</button>
+				</div>
+				
+				<div id = "rightcolumn">				
+					<label for="file">Upload your screenshots</label>
+					<input type="file" id="screenshots" name="ss" multiple/>
+					<div><button id="uploadScreenshots" class="btn btn-primary">Upload</button></div>
+				</div>
+				
+				
+				
+				
+				<div id="zoom">
+				  <button id="zoomIn" type="button" class="btn btn-default">Zoom In</button>
+				  <button id="zoomOut" type="button" class="btn btn-default">Zoom Out</button>
+				</div>
+				
+				<br>
+				
+				<div id="toggles">
+					<button id="togglegui" type="button" class="btn btn-default">Toggle GUI</button>
+					<button id="toggleefg" type="button" class="btn btn-default">Toggle EFG</button>
+					<button id="toggletest" type="button" class="btn btn-default">Toggle Test Cases</button>
+					<button id="togglescreens" type="button" class="btn btn-default">Toggle Screenshots</button>
+					<button id="savegui" type="button" class="btn btn-default">Save GUI Changes</button>
+				</div>
+				
+			</div>
+			
+			<br>
+			<br>
+			
+			<div id="menu" class="rightMenu">
+				<ul>
+					<ul>
+						<li id="modgui"><a>Edit Gui</a></li>
+					</ul>
+				</ul>
+			</div>
+			
+			<div id="mod-gui" title="Modify Current GUI object">
+				<p>
+					Edit the parameters to change the current GUI object.
+				</p>
+				<div class = "info" id = "namenew">
+					 Name: <input type="text" id = "getname" name ="nameget" /> <br/>
+				</div>
+				<div class = "info" id = "xnew">
+					 X Value: <input type="text" id = "getx" name ="xget" /> <br/>
+				</div>
+				<br>
+				<div class = "info" id = "ynew">
+					 Y Value: <input type="text" id = "gety" name="yget" /> <br/>
+				</div>
+				<div class = "info" id = "wnew">
+					 Width: <input type="text" id = "getw" name ="wget" /> <br/>
+				</div>
+				<br>
+				<div class = "info" id = "hnew">
+					 Height: <input type="text" id = "geth" name="hget" /> <br/>
+				</div>
+			</div>
+			
+			<div class="col-md-12">
+				<div id="showGraph"></div>
+			</div>
+		</div>
+	</div>
+	<br><br>
+
+	<div id="draggable" class="ui-widget-content">
+		
+			<table id="tc_table">
+				<tr><th colspan="2"> Testcase Name</th></tr>
+			</table>
+			
+			<div id= "checkButtons">
+				<button id="checkAll" class="btn btn-primary">Check All</button>
+				<button id="uncheckAll" class="btn btn-primary">Decheck All</button>
+			</div>
+	</div>	
+
+</body>
+</html>

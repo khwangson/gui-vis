@@ -1,0 +1,32 @@
+#menu {
+    display: none;
+    position: absolute;
+    padding: 10px;
+    background-color: #ddd;
+    border: 1px solid #000;
+	z-index:1;
+}
+
+.rightMenu li a:active{
+	color:#FFFFFF;
+}
+
+.rightMenu li a:hover {
+	text-decoration:underline;
+	color: #FFFFFF;
+}
+
+.rightMenu ul{
+list-style-type:none;
+padding-left:0px;
+}
+
+.info{
+	border:1px solid;
+	border-radius:30px;
+	border-color: #C0C0C0;
+	color: #383838;
+	font-size: 14;
+	
+}
+
